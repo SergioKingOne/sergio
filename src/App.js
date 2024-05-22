@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Link } from 'react-scroll';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import './styles/global.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
+            <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
+            <li><Link to="testimonials" smooth={true} duration={500}>Testimonials</Link></li>
+            <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+          </ul>
+        </nav>
       </header>
+
+      <main>
+        <Skills />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </main>
+
+      <footer>
+        <p>&copy; 2024 Sergio's Portfolio</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
