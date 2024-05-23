@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section id="skills">
-        <h2>Skills</h2>
-        <!-- Skills content -->
-      </section>
+  <main>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Python</div>
+        <div class="skill">Blender</div>
+        <div class="skill">Git</div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <!-- Projects content -->
-      </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <div class="project">
+          <h3>Project 1: Portfolio Website</h3>
+          <p>A personal portfolio website built with HTML, CSS, and React.</p>
+          <a href="https://github.com/yourusername/portfolio-website" target="_blank" rel="noopener noreferrer">View Code</a>
+        </div>
+        <div class="project">
+          <h3>Project 2: Forex Trading Bot</h3>
+          <p>An automated trading bot developed using Python and various trading algorithms.</p>
+          <a href="https://github.com/yourusername/forex-trading-bot" target="_blank" rel="noopener noreferrer">View Code</a>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
 
-      <section id="testimonials">
-        <h2>Testimonials</h2>
-        <!-- Testimonials content -->
-      </section>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonials-list">
+        <div class="testimonial">
+          <p>"Sergio is an excellent developer. His work is top-notch!"</p>
+          <p>- Client 1</p>
+        </div>
+        <div class="testimonial">
+          <p>"Highly recommended for any development needs."</p>
+          <p>- Client 2</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <!-- Contact content -->
-      </section>
-    </main>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form" action="https://formspree.io/f/yourformendpoint" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-    <footer>
-      <p>&copy; 2024 Sergio's Portfolio</p>
-    </footer>
-  </body>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sergio's Portfolio</p>
+  </footer>
+</body>
 </html>
