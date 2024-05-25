@@ -2,20 +2,25 @@
   --dark-gray: #222222;
   --gold: #C2A14E;
   --white: #FFFFFF;
+  --light-gray: #333333;
   --header-height: 60px;
 }
 
 body {
-  background-color: var(--dark-gray);
+  /* background-color: var(--dark-gray); */
   color: var(--white);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  padding: 0;
   padding-top: var(--header-height);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   color: var(--gold);
+  line-height: 1.2;
 }
 
 a {
@@ -27,15 +32,24 @@ a:hover {
   text-decoration: underline;
 }
 
+header {
+  background-color: var(--light-gray);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 nav {
   background-color: var(--dark-gray);
   padding: 10px 20px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
+  list-style: none;
   padding: 10px 0;
   margin: 0;
 }
@@ -46,6 +60,7 @@ nav ul li {
 
 nav ul li a {
   color: var(--white);
+  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 1.2em;
@@ -57,43 +72,28 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   color: var(--white);
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  background-color: var(--dark-gray);
-  z-index: 1000;
-  padding: 10px 0;
-  top: 0;
-}
 
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  margin-top: 60px; /* Space between sections */
-  padding: calc(var(--header-height) + 60px) 20px 60px;
+  background-color: var(--dark-gray);
 }
-
-/* changes from here */
 
 .section-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: var(--gold);
 }
 
 .skills-list, .projects-list, .testimonials-list {
@@ -104,17 +104,28 @@ header {
 
 .skill, .project, .testimonial {
   margin: 10px;
-  padding: 15px;
+  padding: 20px;
   border: 1px solid var(--gold);
   border-radius: 5px;
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   color: var(--white);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
 }
 
 .skill, .testimonial {
   width: 100%;
   max-width: 300px;
+}
+
+.skill i {
+  margin-right: 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.skill:hover i {
+  color: var(--gold);
+  transform: rotate(20deg);
 }
 
 .project {
@@ -131,8 +142,16 @@ header {
   text-decoration: none;
 }
 
+.project img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
 .project a:hover {
   text-decoration: underline;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .contact-form {
@@ -173,4 +192,23 @@ header {
 .contact-form button:hover {
   background-color: var(--white);
   color: var(--gold);
+}
+
+/* Adding basic fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section {
+  animation: fadeIn 1s ease-in;
+}
+
+nav ul li a:hover {
+  color: var(--gold);
+  transition: color 0.3s;
 }
