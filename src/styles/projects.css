@@ -1,46 +1,106 @@
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    margin-top: 60px;
-  }
-  
-  .section-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--gold);
-  }
-  
-  .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .project {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid var(--gold);
-    border-radius: 5px;
-    background-color: var(--dark-gray);
-    color: var(--white);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  .project h3 {
-    margin-top: 0;
-  }
-  
-  .project a {
-    color: var(--gold);
-    text-decoration: none;
-  }
-  
-  .project a:hover {
-    text-decoration: underline;
-  }
-  
+.project {
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.project-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-content {
+  text-align: center;
+}
+
+
+/* Projects */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: var(--light-gray);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  color: var(--gold);
+  margin: 10px 0;
+}
+
+.project-card p {
+  font-size: 1.1em;
+  color: var(--white);
+}
+
+.project-card a {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects for Projects */
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects {
+  background: linear-gradient(to bottom, var(--dark-gray), var(--light-gray));
+} 

@@ -1,51 +1,45 @@
-.section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--gold);
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contact-form label {
-    margin: 10px 0 5px;
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid var(--gold);
-    border-radius: 5px;
-    background-color: var(--dark-gray);
-    color: var(--white);
-  }
-  
-  .contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--gold);
-    color: var(--dark-gray);
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-  }
-  
-  .contact-form button:hover {
-    background-color: var(--white);
-    color: var(--gold);
-  }
-  
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  margin: 10px 0 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--gold);
+  color: var(--dark-gray);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effects for Contact Button */
+.contact-form button:hover {
+  background-color: var(--white);
+  color: var(--gold);
+}
+
+#contact {
+  background: var(--dark-gray);
+}

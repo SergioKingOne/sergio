@@ -1,31 +1,74 @@
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    margin-top: 60px;
-  }
-  
-  .section-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--gold);
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .skill {
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid var(--gold);
-    border-radius: 5px;
-    background-color: var(--dark-gray);
-    color: var(--white);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
+/* Skills */
+
+.skill {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animation for skill icons */
+.skill i {
+  margin-right: 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  background-color: var(--gold);
+  color: var(--dark-gray);
+}
+
+.skill:hover i {
+  color: var(--dark-gray);
+  transform: rotate(20deg);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  background-color: var(--light-gray);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.skill-card i {
+  font-size: 3em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 1.2em;
+  color: var(--white);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--gold);
+  color: var(--dark-gray);
+}
+
+/* Hover Effects for Skills */
+.skill-card i {
+  font-size: 3em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--gold);
+  color: var(--dark-gray);
+}
+
+.skill-card:hover i {
+  color: var(--dark-gray);
+}
