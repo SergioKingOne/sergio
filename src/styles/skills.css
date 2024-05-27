@@ -1,24 +1,21 @@
-/* Skills */
-
-.skill {
-  transition: transform 0.3s, background-color 0.3s;
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Animation for skill icons */
-.skill i {
-  margin-right: 8px;
-  transition: color 0.3s, transform 0.3s;
+.skill-category {
+  flex: 1 1 300px;
+  margin-bottom: 40px;
 }
 
-.skill:hover {
-  transform: translateY(-10px);
-  background-color: var(--gold);
-  color: var(--dark-gray);
-}
-
-.skill:hover i {
-  color: var(--dark-gray);
-  transform: rotate(20deg);
+.skill-category h3 {
+  text-align: center;
+  font-size: 1.8em;
+  color: var(--gold);
+  margin-bottom: 20px;
 }
 
 .skills-list {
@@ -35,13 +32,15 @@
   margin: 10px;
   width: 150px;
   text-align: center;
-  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
 .skill-card i {
   font-size: 3em;
   color: var(--gold);
   margin-bottom: 10px;
+  transition: color 0.3s;
 }
 
 .skill-card p {
@@ -51,24 +50,36 @@
 
 .skill-card:hover {
   transform: translateY(-10px);
-  background-color: var(--gold);
-  color: var(--dark-gray);
-}
-
-/* Hover Effects for Skills */
-.skill-card i {
-  font-size: 3em;
-  color: var(--gold);
-  margin-bottom: 10px;
-  transition: color 0.3s;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   background-color: var(--gold);
   color: var(--dark-gray);
 }
 
 .skill-card:hover i {
   color: var(--dark-gray);
+}
+
+.skill-level {
+  background-color: var(--dark-gray);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.skill-percentage {
+  background-color: var(--gold);
+  height: 100%;
+  transition: width 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skill-category {
+    flex: 1 1 100%;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
 }
