@@ -122,3 +122,17 @@
   position: relative;
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .contact-card form input,
+  .contact-card form textarea {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .contact-card {
+    padding: 20px;
+    margin: 10px;
+    width: auto;
+  }
+}
