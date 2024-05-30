@@ -3,33 +3,49 @@ import "../styles/contact.css";
 
 const Contact = () => {
   return (
-    <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-      <form
-        class="contact-form"
-        action="https://formspree.io/f/yourformendpoint"
-        method="POST"
-        id="contact-form"
-      >
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          pattern="[A-Za-z\s]{1,50}"
-          title="Name should only contain letters and spaces."
-        />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
+    <div className="contact-section">
+      <div className="contact-card">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label htmlFor="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <label htmlFor="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <label htmlFor="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div className="contact-info">
+          <p>
+            Email:{" "}
+            <a href="mailto:sergiorobayorr@gmail.com">
+              sergiorobayorr@gmail.com
+            </a>
+          </p>
+          <p>
+            Phone: <a href="tel:+573114919504">+57 3114919504</a>
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
