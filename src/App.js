@@ -15,6 +15,8 @@ const App = () => {
       <Header />
 
       <main>
+        <div id="particles-js"></div>
+
         <Hero />
         <Skills />
         <Experience />
