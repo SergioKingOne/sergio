@@ -1,5 +1,4 @@
 .contact-section {
-  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -7,6 +6,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  background: transparent;
 }
 
 .contact-card {
@@ -89,20 +89,6 @@
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-.contact-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: url("../../public/assets/bgs/3d-black-wallpaper-background-design.jpg")
-    no-repeat center center;
-  opacity: 0.1;
-  animation: movePattern 60s linear infinite;
-  z-index: 0;
 }
 
 @keyframes movePattern {
