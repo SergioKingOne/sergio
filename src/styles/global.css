@@ -11,15 +11,19 @@ html {
 }
 
 body {
-  background: url("../../public/assets/bgs/3d-black-wallpaper-background-design.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  color: var(--white);
-  font-family: "Open Sans", sans-serif;
   margin: 0;
-  padding-top: var(--header-height);
-  padding-bottom: 130px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white);
   position: relative;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 20px;
+  background: transparent;
 }
 
 body::before {
@@ -29,8 +33,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Adjust opacity for the desired darkness */
-  z-index: -1; /* Ensure it stays behind the content */
+  background: rgba(0, 0, 0, 0.05);
+  z-index: -1;
 }
 
 h1,
@@ -43,7 +47,6 @@ h6 {
   color: var(--gold);
 }
 
-/* Subheadings */
 h3 {
   font-size: 1.8em;
   color: var(--gold);
@@ -126,11 +129,11 @@ a:hover {
 }
 
 .section {
+  position: relative;
+  z-index: 1; /* Ensure content stays above particles */
   padding: 100px 20px;
   text-align: center;
   background: transparent;
-  position: relative;
-  animation: fadeIn 1s ease-in-out;
 }
 
 .section:nth-child(even) {
@@ -182,24 +185,28 @@ a:hover {
 }
 
 .contact-section,
-.experience-section,
 .skills-section,
+.experience-section,
 .projects-section,
 .testimonials-section {
-  position: relative;
-  padding: 60px 20px;
-  transition: background 0.5s ease-in-out;
+  padding: 100px 20px;
+  background: transparent;
   text-align: center;
 }
 
 .contact-card,
-.contact-info,
+.skill-card,
 .experience-card,
-.skills-card,
-.projects-card,
-.testimonials-card {
+.project-card,
+.testimonial-card {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #experience,
@@ -355,6 +362,37 @@ body.light-theme .hero-button {
 .project-card,
 .testimonial-card {
   animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Particles.js container */
+#main-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  z-index: -1;
+}
+
+.animated-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Adding bounce animation */

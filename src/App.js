@@ -15,6 +15,7 @@ const App = () => {
       <Header />
 
       <main>
+        <div id="main-bg"></div>
         <Hero />
         <Skills />
         <Experience />
