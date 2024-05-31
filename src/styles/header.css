@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 header {
   background-color: var(--dark-gray);
   position: fixed;
@@ -15,10 +17,10 @@ header .container {
 }
 
 header .logo a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
   color: var(--gold);
-  font-size: 1.5em;
+  font-size: 4em;
   text-decoration: none;
 }
 
@@ -65,9 +67,21 @@ header nav ul li a:hover {
   color: var(--white);
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-label .fas {
+  font-size: 1.5rem;
 }
 
 #theme-toggle:checked + .toggle-label {
   background-color: var(--gold);
   color: var(--dark-gray);
+}
+
+.active a {
+  color: var(--gold);
+  border-radius: 5px;
 }

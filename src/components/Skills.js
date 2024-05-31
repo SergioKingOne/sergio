@@ -55,6 +55,16 @@ const Skills = () => {
           <h3>Backend Development</h3>
           <div className="skills-list">
             <div className="skill-card">
+              <i className="fab fa-rust"></i>
+              <p>Rust</p>
+              <div className="skill-level">
+                <div
+                  className="skill-percentage"
+                  style={{ width: "85%" }}
+                ></div>
+              </div>
+            </div>
+            <div className="skill-card">
               <i className="fab fa-python"></i>
               <p>Python</p>
               <div className="skill-level">
