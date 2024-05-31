@@ -15,8 +15,7 @@ const App = () => {
       <Header />
 
       <main>
-        <div id="particles-js"></div>
-
+        <div id="main-bg"></div>
         <Hero />
         <Skills />
         <Experience />
