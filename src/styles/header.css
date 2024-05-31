@@ -67,6 +67,13 @@ header nav ul li a:hover {
   color: var(--white);
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-label .fas {
+  font-size: 1.5rem;
 }
 
 #theme-toggle:checked + .toggle-label {

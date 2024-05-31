@@ -27,10 +27,10 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div class="theme-toggle">
+        <div className="theme-toggle">
           <input type="checkbox" id="theme-toggle" />
-          <label for="theme-toggle" class="toggle-label">
-            Toggle Theme
+          <label htmlFor="theme-toggle" className="toggle-label">
+            <i className="fas fa-sun"></i>
           </label>
         </div>
       </div>
