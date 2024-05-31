@@ -3,7 +3,7 @@ import "../styles/contact.css";
 
 const Contact = () => {
   return (
-    <div id="contact-section" className="contact-section">
+    <section id="contact-section" className="contact-section">
       <div className="contact-card">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -45,7 +45,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

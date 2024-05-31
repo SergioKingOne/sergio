@@ -1,28 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/header.css";
 
 const Header = () => {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <header>
-      <div class="container">
-        <div class="logo">
+      <div className="container">
+        <div className="logo">
           <a href="#">Sergio</a>
         </div>
         <nav>
           <ul>
-            <li>
+            <li className={activeSection === "skills" ? "active" : ""}>
               <a href="#skills">Skills</a>
             </li>
-            <li>
+            <li className={activeSection === "experience" ? "active" : ""}>
               <a href="#experience">Experience</a>
             </li>
-            <li>
+            <li className={activeSection === "projects" ? "active" : ""}>
               <a href="#projects">Projects</a>
             </li>
-            <li>
+            <li className={activeSection === "testimonials" ? "active" : ""}>
               <a href="#testimonials">Testimonials</a>
             </li>
-            <li>
+            <li className={activeSection === "contact-section" ? "active" : ""}>
               <a href="#contact-section">Contact</a>
             </li>
           </ul>

@@ -80,3 +80,8 @@ header nav ul li a:hover {
   background-color: var(--gold);
   color: var(--dark-gray);
 }
+
+.active a {
+  color: var(--gold);
+  border-radius: 5px;
+}
