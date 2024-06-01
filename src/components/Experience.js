@@ -8,27 +8,30 @@ const Experience = () => {
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-content">
-            <h3>Software Engineer at Company XYZ</h3>
+            <h3>MLOps Leader at Vertex Studio</h3>
             <p>
-              <strong>Duration:</strong> Jan 2022 - Present
+              <strong>Duration:</strong> Jan 2024 - Present
             </p>
             <p>
-              <strong>Responsibilities:</strong> Developed and maintained web
-              applications using React and Node.js. Collaborated with
-              cross-functional teams to define, design, and ship new features.
+              <strong>Responsibilities:</strong> Achieved MLOps leadership
+              within my 3rd month of joining the company. I have been partly
+              responsible for the development and maintenance of the MLOps
+              pipeline.
             </p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-content">
-            <h3>Junior Developer at Company ABC</h3>
+            <h3>Software Engineer at Vertex Studio</h3>
             <p>
-              <strong>Duration:</strong> Jun 2020 - Dec 2021
+              <strong>Duration:</strong> Nov 2023 - Jan 2024
             </p>
             <p>
-              <strong>Responsibilities:</strong> Assisted in the development of
-              internal tools using Python and Django. Participated in code
-              reviews and contributed to the improvement of coding standards.
+              <strong>Responsibilities:</strong> Developed and maintained
+              endpoints and scripts for AI texture generation and 3D asset
+              generation pipelines using Python and Blender. Contributed to the
+              development of APIs using both Python and Rust. Utilized Docker
+              and Ansible for containerization and configuration management.
             </p>
           </div>
         </div>
