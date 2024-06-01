@@ -16,12 +16,29 @@ const Experience = () => {
             </p>
             <ul>
               <li>
-                Achieved <strong>MLOps leadership</strong> within my 3rd month
-                of joining the company.
+                Achieved <strong>MLOps leadership</strong> within 3 months of
+                joining due to <strong>technical performance</strong> and{" "}
+                <strong>precise communication</strong>.
               </li>
               <li>
-                Partly responsible for the development and maintenance of the{" "}
-                <strong>MLOps pipeline</strong>.
+                Development and maintenance of <strong>MLOps pipeline</strong>.
+              </li>
+              <li>
+                Integrated <strong>generative AI tools</strong> like ChatGPT and
+                GitHub Copilot, boosting productivity.
+              </li>
+              <li>
+                Enhanced <strong>AI-based image generation</strong> efficiency
+                with advanced <strong>prompt engineering</strong> techniques.
+              </li>
+              <li>
+                Conducted <strong>unit and integration testing</strong> in Rust,
+                ensuring software stability.
+              </li>
+              <li>
+                Helped in reducing <strong>AI generation time</strong> from 50s
+                to 3.5s by optimizing the Microsoft ONNX runtime library for
+                NVIDIA hardware.
               </li>
             </ul>
           </div>
@@ -36,18 +53,22 @@ const Experience = () => {
             </p>
             <ul>
               <li>
-                Developed and maintained endpoints and scripts for{" "}
-                <strong>AI texture generation</strong> and{" "}
-                <strong>3D asset generation pipelines</strong> using Python and
-                Blender.
+                Developed and maintained <strong>endpoints and scripts</strong>{" "}
+                for <strong>AI texture and 3D asset generation</strong> using
+                Python and Blender.
               </li>
               <li>
                 Contributed to the development of <strong>APIs</strong> using
-                both Python and Rust.
+                Python and Rust.
               </li>
               <li>
                 Utilized <strong>Docker</strong> and <strong>Ansible</strong>{" "}
-                for containerization and configuration management.
+                for{" "}
+                <strong>containerization and configuration management</strong>.
+              </li>
+              <li>
+                Managed backend services in Rust, focusing on{" "}
+                <strong>data pipeline construction</strong> for generative AI.
               </li>
             </ul>
           </div>
@@ -60,17 +81,17 @@ const Experience = () => {
             </p>
             <ul>
               <li>
-                Provided timely and effective <strong>technical support</strong>{" "}
-                to customers, assisting in problem-solving issues related to
-                both software and hardware.
+                Provided <strong>technical support</strong> to customers,
+                solving software and hardware issues.
               </li>
               <li>
-                Collaborated with multifunctional teams to ensure smooth
-                communication between <strong>technical support</strong>,
-                development, and accounting departments.
+                Ensured smooth communication between{" "}
+                <strong>technical support</strong>, development, and accounting
+                departments.
               </li>
               <li>
-                Achieved the highest amount of hardest issues solved in a month.
+                Achieved the highest number of difficult issues solved in a
+                month.
               </li>
             </ul>
           </div>
