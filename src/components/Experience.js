@@ -73,6 +73,7 @@ const Experience = () => {
             </ul>
           </div>
         </div>
+        {/* TODO: Adding more sections causes dynammic section identification not to work here */}
         <div className="timeline-item">
           <div className="timeline-content">
             <h3>Technical Support Specialist (Internship)</h3>

@@ -5,18 +5,18 @@ const Footer = () => {
   return (
     <footer>
       <p>&copy; 2024 Sergio's Portfolio</p>
-      <div class="social-media">
+      <div className="social-media">
         <a href="https://github.com/SergioKingOne" target="_blank">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/sergio-robayo-500584216/"
           target="_blank"
         >
-          <i class="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin"></i>
         </a>
         <a href="https://twitter.com/yourusername" target="_blank">
-          <i class="fab fa-twitter"></i>
+          <i className="fab fa-twitter"></i>
         </a>
       </div>
     </footer>
