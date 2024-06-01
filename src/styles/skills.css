@@ -46,6 +46,7 @@
 .skill-card p {
   font-size: 1.2em;
   color: var(--white);
+  transition: color 0.3s;
 }
 
 .skill-card:hover {
@@ -59,18 +60,31 @@
   color: var(--dark-gray);
 }
 
+.skill-card:hover p {
+  color: var(--dark-gray);
+}
+
 .skill-level {
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   border-radius: 5px;
   overflow: hidden;
   height: 10px;
   margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 .skill-percentage {
   background-color: var(--gold);
   height: 100%;
-  transition: width 0.3s;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.skill-card:hover .skill-level {
+  background-color: var(--white);
+}
+
+.skill-card:hover .skill-percentage {
+  background-color: var(--dark-gray);
 }
 
 /* Responsive Design */
