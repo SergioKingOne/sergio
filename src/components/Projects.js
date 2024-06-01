@@ -6,21 +6,21 @@ const projectsData = [
     title: "Wild Oasis",
     image: "./assets/wild_oasis.jpeg",
     description:
-      "A personal portfolio website built with HTML, CSS, and React.",
+      "A hotel administration web application built with React, Redux, and Supabase.",
     details:
-      "This project features a responsive design, modern UI components, and integration with several APIs.",
-    link: "https://github.com/yourusername/portfolio-website",
-    demo: "https://yourdemo.com/wild-oasis",
+      "This project is a hotel administration web application that allows users to manage hotel rooms, reservations, and guests. It was built using React, Redux, and Supabase. The application uses Supabase as the backend to store and manage data. The application allows users to add, edit, and delete rooms, reservations, and guests. It also allows users to search for rooms and reservations based on various criteria. The application also includes a dashboard that displays various statistics and charts related to the hotel's performance.",
+    link: "https://github.com/SergioKingOne/the-wild-oasis",
+    demo: "https://wild-oasis-sergio-robayo.netlify.app/",
   },
   {
     title: "Fast Pizza",
     image: "./assets/fast-pizza.jpeg",
     description:
-      "An automated trading bot developed using Python and various trading algorithms.",
+      "A pizza ordering web application built with HTML, CSS, and JavaScript.",
     details:
-      "Utilizes machine learning algorithms to analyze market trends and make trading decisions.",
-    link: "https://github.com/yourusername/forex-trading-bot",
-    demo: "https://yourdemo.com/fast-pizza",
+      "This project is a pizza ordering web application that allows users to order pizzas online. It was built using HTML, CSS, and JavaScript. The application allows users to select the type and size of the pizza they want to order. Users can also add toppings and specify the quantity of pizzas they want to order. The application calculates the total cost of the order based on the user's selections. Users can also view their order history and reorder previous orders. The application also includes an admin panel that allows the restaurant owner to manage the menu, view orders, and update order status.",
+    link: "https://github.com/SergioKingOne/fast-pizza",
+    demo: "https://fast-pizza-sergio.netlify.app/",
   },
   // Add more projects here
 ];
@@ -29,7 +29,11 @@ const Projects = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleExpand = (index) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+    if (expandedIndex === index) {
+      setExpandedIndex(null);
+    } else {
+      setExpandedIndex(index);
+    }
   };
 
   return (
