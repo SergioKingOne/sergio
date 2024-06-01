@@ -1,52 +1,15 @@
-.project {
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-.project img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.project a:hover {
-  text-decoration: underline;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-
-.project-image {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.project-content {
+/* Projects Section */
+.projects-section {
+  background: var(--dark-gray);
+  padding: 60px 20px;
   text-align: center;
 }
 
-
-/* Projects */
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 .project-card {
@@ -56,11 +19,12 @@
   padding: 20px;
   margin: 10px;
   width: 300px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -77,13 +41,17 @@
 
 .project-card p {
   font-size: 1.1em;
+  flex-grow: 1;
   color: var(--white);
+  margin-bottom: 15px;
 }
 
 .project-card a {
   font-size: 1.1em;
   font-weight: bold;
   color: var(--gold);
+  text-decoration: none;
+  margin-top: auto; /* Ensures the link stays at the bottom */
 }
 
 .project-card a:hover {
@@ -93,7 +61,13 @@
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced out */
+  height: 100%;
 }
 
 /* Hover Effects for Projects */
@@ -103,4 +77,15 @@
 
 #projects {
   background: linear-gradient(to bottom, var(--dark-gray), var(--light-gray));
-} 
+}
+
+@media screen and (max-width: 768px) {
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
