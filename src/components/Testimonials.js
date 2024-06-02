@@ -1,19 +1,55 @@
 import React from "react";
 import "../styles/testimonials.css";
+import { FaLinkedin } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const Testimonials = () => {
+  const CustomPrevArrow = ({ onClick }) => (
+    <div className="custom-arrow custom-prev" onClick={onClick}>
+      <MdArrowBack />
+    </div>
+  );
+
+  const CustomNextArrow = ({ onClick }) => (
+    <div className="custom-arrow custom-next" onClick={onClick}>
+      <MdArrowForward />
+    </div>
+  );
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+  };
+
   return (
     <section id="testimonials" className="testimonials-section">
       <h2 className="section-title">Testimonials</h2>
-      <div className="testimonials-list">
+      <Slider {...settings}>
         <div className="testimonial-card">
           <img
             src="./assets/client1.jpg"
             alt="Client 1 Photo"
             className="testimonial-photo"
           />
-          <p>"Sergio is an excellent developer. His work is top-notch!"</p>
-          <p className="client-name">- Client 1</p>
+          <p className="testimonial-text">
+            "Sergio is an excellent developer. His work is top-notch!"
+          </p>
+          <div className="client-info">
+            <p className="client-name">
+              - Client 1 <FaLinkedin />
+            </p>
+            <p className="client-title">Software Engineer at TechCorp</p>
+          </div>
         </div>
         <div className="testimonial-card">
           <img
@@ -21,10 +57,17 @@ const Testimonials = () => {
             alt="Client 2 Photo"
             className="testimonial-photo"
           />
-          <p>"Highly recommended for any development needs."</p>
-          <p className="client-name">- Client 2</p>
+          <p className="testimonial-text">
+            "Highly recommended for any development needs."
+          </p>
+          <div className="client-info">
+            <p className="client-name">
+              - Client 2 <FaLinkedin />
+            </p>
+            <p className="client-title">Project Manager at InnovateX</p>
+          </div>
         </div>
-      </div>
+      </Slider>
     </section>
   );
 };

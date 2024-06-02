@@ -1,45 +1,93 @@
 /* Testimonials */
-.testimonials-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.testimonials-section {
+  background: linear-gradient(to bottom, var(--light-gray), var(--dark-gray));
+  padding: 50px 0;
 }
 
-.testimonial-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+.section-title {
+  text-align: center;
+  color: var(--gold);
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 .testimonial-card {
   background-color: var(--light-gray);
   border: 1px solid var(--gold);
   border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: 300px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1; /* Ensure the card stays above other elements */
 }
 
-.testimonial-card img {
+.testimonial-photo {
+  display: block;
+  margin: 0 auto 20px auto;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 15px;
 }
 
-.testimonial-card p {
-  font-size: 1.1em;
+.testimonial-text {
+  font-size: 1.3em;
   color: var(--white);
+  margin-bottom: 20px;
+  padding: 0 20px; /* Add padding for better readability */
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-name {
+  font-size: 1.2em;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.client-name svg {
+  margin-left: 5px;
+  vertical-align: middle; /* Ensure the icon is vertically aligned */
+}
+
+.client-title {
+  font-size: 1em;
+  color: var(--white);
+  margin-top: 5px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--gold); /* Change dots color to gold */
+}
+
+.custom-arrow {
+  font-size: 24px;
+  z-index: 2; /* Ensure arrows appear above other elements */
+  color: var(--gold);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
 }
 
 .testimonial-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-#testimonials {
-  background: linear-gradient(to bottom, var(--light-gray), var(--dark-gray));
+  z-index: 1; /* Ensure the hover effect doesn't hide the top */
 }
