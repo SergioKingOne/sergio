@@ -10,17 +10,19 @@ const testimonialsData = [
   {
     img: "https://media.licdn.com/dms/image/D4E35AQGvxKJ86UxJDA/profile-framedphoto-shrink_100_100/0/1709308762102?e=1717898400&v=beta&t=CDqJJ8_tBye0Wf3yk3S3Z5qgHjsRDwKVHA-jQ2D-LyM",
     text: "Sergio is an excellent developer. His work is top-notch!",
-    name: "Client 1",
-    title: "Software Engineer at TechCorp",
-    linkedin: "#",
+    name: "Diego Mendez",
+    title: "Software Engineer Freelancer",
+    linkedin:
+      "https://www.linkedin.com/in/diegomendezrojas2002?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BcKlByb5ZR7y2LjwfeZIDXw%3D%3D",
     rating: 5,
   },
   {
     img: "https://media.licdn.com/dms/image/C4E03AQEdh0Lql8kWhQ/profile-displayphoto-shrink_100_100/0/1638569585389?e=1723075200&v=beta&t=hN0oBgiwhryxwVKtrJsPdutkeF2e686_wLtI0EHH71g",
     text: "Highly recommended for any development needs.",
-    name: "Client 2",
-    title: "Project Manager at InnovateX",
-    linkedin: "#",
+    name: "Leandro Signorini",
+    title: "Software Engineer at Vertex Studio",
+    linkedin:
+      "https://www.linkedin.com/in/leandrosignorini?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BcKlByb5ZR7y2LjwfeZIDXw%3D%3D",
     rating: 4,
   },
   // Add more testimonials here

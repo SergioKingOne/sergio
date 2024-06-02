@@ -24,10 +24,6 @@ const Experience = () => {
                 Development and maintenance of <strong>MLOps pipeline</strong>.
               </li>
               <li>
-                Integrated <strong>generative AI tools</strong> like ChatGPT and
-                GitHub Copilot, boosting productivity.
-              </li>
-              <li>
                 Enhanced <strong>AI-based image generation</strong> efficiency
                 with advanced <strong>prompt engineering</strong> techniques.
               </li>
@@ -74,7 +70,7 @@ const Experience = () => {
           </div>
         </div>
         {/* TODO: Adding more sections causes dynammic section identification not to work here */}
-        <div className="timeline-item">
+        {/* <div className="timeline-item">
           <div className="timeline-content">
             <h3>Technical Support Specialist (Internship)</h3>
             <p>
@@ -96,7 +92,7 @@ const Experience = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
