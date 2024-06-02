@@ -151,16 +151,14 @@ a:hover {
 }
 
 .skills-list,
-.projects-list,
-.testimonials-list {
+.projects-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .skill,
-.project,
-.testimonial {
+.project {
   margin: 20px;
   padding: 20px;
   border: 1px solid var(--gold);
@@ -178,8 +176,7 @@ a:hover {
 }
 
 .skill-card:hover,
-.project-card:hover,
-.testimonial-card:hover {
+.project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -187,8 +184,7 @@ a:hover {
 .contact-section,
 .skills-section,
 .experience-section,
-.projects-section,
-.testimonials-section {
+.projects-section {
   padding: 100px 20px;
   background: transparent;
   text-align: center;
@@ -197,8 +193,7 @@ a:hover {
 .contact-card,
 .skill-card,
 .experience-card,
-.project-card,
-.testimonial-card {
+.project-card {
   background-color: var(--dark-gray);
   border: 1px solid var(--gold);
   border-radius: 10px;
@@ -249,8 +244,7 @@ nav ul li a:hover {
   transition: color 0.3s;
 }
 
-.skill,
-.testimonial {
+.skill {
   width: 100%;
   max-width: 300px;
 }
@@ -443,8 +437,7 @@ body.light-theme .hero-button {
   }
 
   .skill-card,
-  .project-card,
-  .testimonial-card {
+  .project-card {
     width: 90%;
   }
 }
