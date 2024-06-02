@@ -1,106 +1,145 @@
-.project {
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-.project img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.project a:hover {
-  text-decoration: underline;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-
-.project-image {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.project-content {
+/* Projects Section */
+.projects-section {
+  background: var(--dark-gray);
+  padding: 80px 20px;
   text-align: center;
 }
 
+.section-title {
+  font-size: 2.5em;
+  color: var(--gold);
+  margin-bottom: 40px;
+  position: relative;
+}
 
-/* Projects */
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px auto 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 .project-card {
   background-color: var(--light-gray);
-  border: 1px solid var(--gold);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  max-height: 400px;
+  padding-bottom: 20px; /* Add padding to initial view */
+}
+
+.project-card.expanded {
+  max-height: 600px; /* Adjust based on content */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.project-card img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.project-card h3 {
-  font-size: 1.5em;
+.project-content h3 {
+  font-size: 1.8em;
   color: var(--gold);
   margin: 10px 0;
 }
 
-.project-card p {
+.project-content p {
   font-size: 1.1em;
   color: var(--white);
+  margin-bottom: 10px;
+  white-space: normal; /* Allow text to wrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 60px; /* Set a max height to initial view */
 }
 
-.project-card a {
-  font-size: 1.1em;
-  font-weight: bold;
+.project-details {
+  padding-top: 10px;
+  border-top: 1px solid var(--gold);
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+  background-color: var(--light-gray);
+  padding: 20px;
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.project-details.show {
+  opacity: 1;
+  max-height: 400px; /* Adjust based on content */
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.view-code,
+.view-demo {
   color: var(--gold);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  display: inline-block;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
-  color: var(--white);
+.view-code:hover,
+.view-demo:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 
-/* Hover Effects for Projects */
-.project-card {
-  transition: transform 0.3s, box-shadow 0.3s;
+  .project-card {
+    width: 90%;
+  }
 }
-
-#projects {
-  background: linear-gradient(to bottom, var(--dark-gray), var(--light-gray));
-} 
