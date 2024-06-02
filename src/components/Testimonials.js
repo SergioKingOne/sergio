@@ -6,6 +6,26 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
+const testimonialsData = [
+  {
+    img: "./assets/client1.jpg",
+    text: "Sergio is an excellent developer. His work is top-notch!",
+    name: "Client 1",
+    title: "Software Engineer at TechCorp",
+    linkedin: "#",
+    rating: 5,
+  },
+  {
+    img: "./assets/client2.jpg",
+    text: "Highly recommended for any development needs.",
+    name: "Client 2",
+    title: "Project Manager at InnovateX",
+    linkedin: "#",
+    rating: 4,
+  },
+  // Add more testimonials here
+];
+
 const Testimonials = () => {
   const CustomPrevArrow = ({ onClick }) => (
     <div className="custom-arrow custom-prev" onClick={onClick}>
@@ -61,38 +81,29 @@ const Testimonials = () => {
     <section id="testimonials" className="testimonials-section">
       <h2 className="section-title">Testimonials</h2>
       <Slider {...settings}>
-        <div className="testimonial-card">
-          <img
-            src="./assets/client1.jpg"
-            alt="Client 1 Photo"
-            className="testimonial-photo"
-          />
-          <p className="testimonial-text">
-            "Sergio is an excellent developer. His work is top-notch!"
-          </p>
-          <div className="client-info">
-            <p className="client-name">
-              - Client 1 <FaLinkedin />
-            </p>
-            <p className="client-title">Software Engineer at TechCorp</p>
+        {testimonialsData.map((testimonial, index) => (
+          <div className="testimonial-card" key={index}>
+            <img
+              src={testimonial.img}
+              alt={`${testimonial.name} Photo`}
+              className="testimonial-photo"
+            />
+            <p className="testimonial-text">"{testimonial.text}"</p>
+            <div className="client-info">
+              <p className="client-name">
+                - {testimonial.name}{" "}
+                <a href={testimonial.linkedin}>
+                  <FaLinkedin />
+                </a>
+              </p>
+              <p className="client-title">{testimonial.title}</p>
+              <div className="client-rating">
+                {"★".repeat(testimonial.rating)}
+                {"☆".repeat(5 - testimonial.rating)}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="testimonial-card">
-          <img
-            src="./assets/client2.jpg"
-            alt="Client 2 Photo"
-            className="testimonial-photo"
-          />
-          <p className="testimonial-text">
-            "Highly recommended for any development needs."
-          </p>
-          <div className="client-info">
-            <p className="client-name">
-              - Client 2 <FaLinkedin />
-            </p>
-            <p className="client-title">Project Manager at InnovateX</p>
-          </div>
-        </div>
+        ))}
       </Slider>
     </section>
   );
