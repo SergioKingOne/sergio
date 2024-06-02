@@ -29,6 +29,32 @@ const Testimonials = () => {
     autoplaySpeed: 5000,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    appendDots: (dots) => (
+      <div style={{ backgroundColor: "transparent", padding: "10px" }}>
+        <ul
+          style={{
+            margin: "0px",
+            display: "flex",
+            justifyContent: "center",
+            padding: "0px",
+          }}
+        >
+          {dots}
+        </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "12px",
+          height: "12px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          display: "inline-block",
+          margin: "0 5px",
+        }}
+      ></div>
+    ),
   };
 
   return (

@@ -1,7 +1,8 @@
-/* Testimonials */
 .testimonials-section {
   background: linear-gradient(to bottom, var(--light-gray), var(--dark-gray));
+  background: transparent;
   padding: 50px 0;
+  text-align: center;
 }
 
 .section-title {
@@ -12,16 +13,15 @@
 }
 
 .testimonial-card {
-  background-color: var(--light-gray);
+  background-color: var(--dark-gray);
   border: 1px solid var(--gold);
   border-radius: 10px;
   padding: 30px;
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
-  z-index: 1; /* Ensure the card stays above other elements */
+  box-sizing: border-box;
 }
 
 .testimonial-photo {
@@ -36,7 +36,7 @@
   font-size: 1.3em;
   color: var(--white);
   margin-bottom: 20px;
-  padding: 0 20px; /* Add padding for better readability */
+  padding: 0 20px;
 }
 
 .client-info {
@@ -54,7 +54,7 @@
 
 .client-name svg {
   margin-left: 5px;
-  vertical-align: middle; /* Ensure the icon is vertically aligned */
+  vertical-align: middle;
 }
 
 .client-title {
@@ -63,14 +63,35 @@
   margin-top: 5px;
 }
 
+.slick-dots {
+  bottom: -25px;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Add margin between dots */
+}
+
 .slick-dots li button:before {
   font-size: 12px;
-  color: var(--gold); /* Change dots color to gold */
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--gold);
+}
+
+.slick-list {
+  padding-bottom: 20px !important;
 }
 
 .custom-arrow {
   font-size: 24px;
-  z-index: 2; /* Ensure arrows appear above other elements */
+  z-index: 2;
   color: var(--gold);
   position: absolute;
   top: 50%;
@@ -84,10 +105,4 @@
 
 .custom-next {
   right: 10px;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1; /* Ensure the hover effect doesn't hide the top */
 }
