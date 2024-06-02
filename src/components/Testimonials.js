@@ -8,7 +8,7 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const testimonialsData = [
   {
-    img: "./assets/client1.jpg",
+    img: "https://media.licdn.com/dms/image/D4E35AQGvxKJ86UxJDA/profile-framedphoto-shrink_100_100/0/1709308762102?e=1717898400&v=beta&t=CDqJJ8_tBye0Wf3yk3S3Z5qgHjsRDwKVHA-jQ2D-LyM",
     text: "Sergio is an excellent developer. His work is top-notch!",
     name: "Client 1",
     title: "Software Engineer at TechCorp",
@@ -16,7 +16,7 @@ const testimonialsData = [
     rating: 5,
   },
   {
-    img: "./assets/client2.jpg",
+    img: "https://media.licdn.com/dms/image/C4E03AQEdh0Lql8kWhQ/profile-displayphoto-shrink_100_100/0/1638569585389?e=1723075200&v=beta&t=hN0oBgiwhryxwVKtrJsPdutkeF2e686_wLtI0EHH71g",
     text: "Highly recommended for any development needs.",
     name: "Client 2",
     title: "Project Manager at InnovateX",
@@ -50,7 +50,7 @@ const Testimonials = () => {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     appendDots: (dots) => (
-      <div style={{ backgroundColor: "transparent", padding: "10px" }}>
+      <div style={{ backgroundColor: "transparent" }}>
         <ul
           style={{
             margin: "0px",
