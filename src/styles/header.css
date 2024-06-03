@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-:root {
-  --dark-gray: #333;
-  --gold: #d4af37;
-  --white: #fff;
-  --light-gray: #555;
-}
-
 header {
   background-color: var(--dark-gray);
   position: fixed;
