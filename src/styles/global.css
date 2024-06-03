@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--white);
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow */
   padding-bottom: 100px;
 }
 
@@ -37,12 +38,7 @@ body::before {
   z-index: -1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   color: var(--gold);
 }
@@ -86,6 +82,7 @@ a:hover {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .nav ul {
@@ -95,6 +92,7 @@ a:hover {
   padding: 10px 0;
   margin: 0;
   background-color: var(--dark-gray);
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .nav ul li {
@@ -348,7 +346,7 @@ body.light-theme .hero-button {
 
 .scroll-to-top-btn:hover {
   background-color: var(--white);
-  color: var(--gold);
+  color: var (--gold);
   transform: translateY(-5px);
 }
 
@@ -391,11 +389,7 @@ body.light-theme .hero-button {
 
 /* Adding bounce animation */
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
@@ -407,10 +401,48 @@ body.light-theme .hero-button {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .skill, .project, .testimonial {
+    max-width: 45%;
+  }
+
+  .nav ul li {
+    margin: 0 15px;
+  }
+
+  .section-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skill, .project, .testimonial {
+    max-width: 100%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .section-title {
+    font-size: 2.2em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .skills-list,
-  .projects-list,
-  .testimonials-list {
+  .skills-list, .projects-list, .testimonials-list {
     flex-direction: column;
     align-items: center;
   }
@@ -425,19 +457,106 @@ body.light-theme .hero-button {
   }
 
   .hero-content h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .hero-content p {
-    font-size: 1.2em;
-  }
-
-  .hero-button {
     font-size: 1em;
   }
 
+  .hero-button {
+    font-size: 0.9em;
+  }
+
+  .skill-card, .project-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .contact-card,
   .skill-card,
+  .experience-card,
   .project-card {
-    width: 90%;
+    padding: 20px;
+  }
+
+  .scroll-to-top-btn {
+    font-size: 1.2em;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav ul {
+    padding: 10px 0;
+  }
+
+  .nav ul li {
+    margin: 5px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 0.9em;
+  }
+
+  .hero-button {
+    font-size: 0.8em;
+  }
+
+  .skill-card, .project-card {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .scroll-to-top-btn {
+    font-size: 1em;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav ul {
+    padding: 5px 0;
+  }
+
+  .nav ul li {
+    margin: 3px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 0.8em;
+  }
+
+  .hero-button {
+    font-size: 0.7em;
+  }
+
+  .skill-card, .project-card {
+    padding: 5px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .scroll-to-top-btn {
+    font-size: 0.8em;
+    padding: 5px 8px;
   }
 }

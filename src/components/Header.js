@@ -3,6 +3,7 @@ import "../styles/header.css";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [navActive, setNavActive] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -31,13 +32,25 @@ const Header = () => {
     };
   }, []);
 
+  const toggleNav = () => {
+    setNavActive(!navActive);
+  };
+
   return (
     <header>
       <div className="container">
         <div className="logo">
           <a href="#">Sergio</a>
         </div>
-        <nav>
+        <div
+          className={`hamburger ${navActive ? "hamburger-active" : ""}`}
+          onClick={toggleNav}
+        >
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
+        <nav className={navActive ? "nav-active" : ""}>
           <ul>
             <li className={activeSection === "skills" ? "active" : ""}>
               <a href="#skills">Skills</a>

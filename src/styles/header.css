@@ -16,12 +16,23 @@ header .container {
   padding: 10px 20px;
 }
 
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
 header .logo a {
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   color: var(--gold);
   font-size: 4em;
   text-decoration: none;
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul {
@@ -64,7 +75,7 @@ header nav ul li a:hover {
   cursor: pointer;
   padding: 10px 20px;
   background-color: var(--light-gray);
-  color: var(--white);
+  color: var (--white);
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
   display: flex;
@@ -84,4 +95,310 @@ header nav ul li a:hover {
 .active a {
   color: var(--gold);
   border-radius: 5px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  header .container {
+    padding: 10px 15px;
+  }
+
+  header .logo a {
+    font-size: 3.5em;
+  }
+
+  header nav ul li a {
+    font-size: 1.1em;
+  }
+
+  .toggle-label {
+    padding: 5px 10px;
+  }
+
+  .section-title {
+    font-size: 2.5em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
+  }
+}
+
+/* Large devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  header .logo a {
+    font-size: 2.5em;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav.nav-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  header nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .hamburger-active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-active .line2 {
+    opacity: 0;
+  }
+
+  .hamburger-active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .theme-toggle {
+    order: -1;
+    margin-top: 10px;
+  }
+
+  .section {
+    padding: 80px 15px;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 20px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 80%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  header .container {
+    padding: 10px 10px;
+  }
+
+  header .logo a {
+    font-size: 3em;
+  }
+
+  header nav ul li a {
+    font-size: 1em;
+  }
+
+  .toggle-label {
+    padding: 5px 8px;
+  }
+
+  .section-title {
+    font-size: 2.2em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 25px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skill, .project {
+    width: 48%;
+  }
+}
+
+/* Small devices (large phones, 576px and up) */
+@media (max-width: 576px) {
+  header .container {
+    padding: 10px;
+  }
+
+  header .logo a {
+    font-size: 2em;
+  }
+
+  header nav ul li a {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .toggle-label {
+    padding: 5px 7px;
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 60px 10px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 20px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 90%;
+  }
+}
+
+/* Extra small devices (phones, 480px and up) */
+@media (max-width: 480px) {
+  header .logo a {
+    font-size: 1.8em;
+  }
+
+  header nav ul li a {
+    font-size: 0.8em;
+  }
+
+  .toggle-label {
+    padding: 5px 5px;
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 50px 10px;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 15px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 95%;
+  }
+}
+
+/* Very small devices (small phones, 360px and up) */
+@media (max-width: 360px) {
+  header .logo a {
+    font-size: 1.5em;
+  }
+
+  header nav ul li a {
+    font-size: 0.7em;
+  }
+
+  .toggle-label {
+    padding: 4px 4px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 40px 5px;
+  }
+
+  .section-title {
+    font-size: 1.4em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 10px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 100%;
+  }
 }
