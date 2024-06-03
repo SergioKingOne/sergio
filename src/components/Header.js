@@ -67,14 +67,14 @@ const Header = () => {
             <li className={activeSection === "contact-section" ? "active" : ""}>
               <a href="#contact-section">Contact</a>
             </li>
+            <li className="theme-toggle">
+              <input type="checkbox" id="theme-toggle" />
+              <label htmlFor="theme-toggle" className="toggle-label">
+                <i className="fas fa-sun"></i>
+              </label>
+            </li>
           </ul>
         </nav>
-        <div className="theme-toggle">
-          <input type="checkbox" id="theme-toggle" />
-          <label htmlFor="theme-toggle" className="toggle-label">
-            <i className="fas fa-sun"></i>
-          </label>
-        </div>
       </div>
     </header>
   );
