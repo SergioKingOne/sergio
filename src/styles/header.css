@@ -104,7 +104,7 @@ header nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* Media Queries for responsiveness */
+/* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
   header .container {
     padding: 10px 15px;
@@ -121,27 +121,21 @@ header nav ul li a:hover {
   .toggle-label {
     padding: 5px 10px;
   }
-}
 
-@media (max-width: 992px) {
-  header .container {
-    padding: 10px 10px;
+  .section-title {
+    font-size: 2.5em;
   }
 
-  header .logo a {
-    font-size: 3em;
-  }
-
-  header nav ul li a {
-    font-size: 1em;
-  }
-
-  .toggle-label {
-    padding: 5px 8px;
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
   }
 }
 
-@media (max-width: 768px) {
+/* Large devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
   header .container {
     flex-direction: row;
     align-items: center;
@@ -169,6 +163,7 @@ header nav ul li a:hover {
   header nav {
     display: none;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
@@ -182,6 +177,8 @@ header nav ul li a:hover {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
   header nav ul li {
@@ -190,6 +187,7 @@ header nav ul li a:hover {
   }
 
   header nav ul li a {
+    display: block;
     width: 100%;
     text-align: center;
     padding: 15px;
@@ -211,8 +209,77 @@ header nav ul li a:hover {
     order: -1;
     margin-top: 10px;
   }
+
+  .section {
+    padding: 80px 15px;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 20px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 80%;
+  }
 }
 
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  header .container {
+    padding: 10px 10px;
+  }
+
+  header .logo a {
+    font-size: 3em;
+  }
+
+  header nav ul li a {
+    font-size: 1em;
+  }
+
+  .toggle-label {
+    padding: 5px 8px;
+  }
+
+  .section-title {
+    font-size: 2.2em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 25px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skill, .project {
+    width: 48%;
+  }
+}
+
+/* Small devices (large phones, 576px and up) */
 @media (max-width: 576px) {
   header .container {
     padding: 10px;
@@ -231,8 +298,35 @@ header nav ul li a:hover {
     padding: 5px 7px;
     font-size: 1.2rem;
   }
+
+  .section {
+    padding: 60px 10px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 20px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 90%;
+  }
 }
 
+/* Extra small devices (phones, 480px and up) */
 @media (max-width: 480px) {
   header .logo a {
     font-size: 1.8em;
@@ -246,8 +340,35 @@ header nav ul li a:hover {
     padding: 5px 5px;
     font-size: 1rem;
   }
+
+  .section {
+    padding: 50px 10px;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 15px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 95%;
+  }
 }
 
+/* Very small devices (small phones, 360px and up) */
 @media (max-width: 360px) {
   header .logo a {
     font-size: 1.5em;
@@ -260,5 +381,31 @@ header nav ul li a:hover {
   .toggle-label {
     padding: 4px 4px;
     font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 40px 5px;
+  }
+
+  .section-title {
+    font-size: 1.4em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 10px;
+  }
+
+  .skills-list,
+  .projects-list,
+  .testimonials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project {
+    width: 100%;
   }
 }
