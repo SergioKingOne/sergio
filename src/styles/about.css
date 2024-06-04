@@ -1,14 +1,32 @@
-.about-section {
-  padding: 100px 20px;
-  text-align: center;
+/* about.css */
+
+:root {
+  --dark-gray: #222222;
+  --gold: #c2a14e;
+  --white: #ffffff;
+  --light-gray: #333333;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
 }
 
-.about-header h2 {
+.about-section {
+  padding: 100px 20px;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
   font-size: 3em;
   color: var(--gold);
   margin-bottom: 40px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--primary-font);
   text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about-content {
@@ -19,6 +37,12 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .about-text {
@@ -27,14 +51,26 @@
   line-height: 1.8;
   text-align: left;
   padding: 20px;
-  background-color: var(--dark-gray);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   border: 1px solid var(--gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+}
+
+.about-text p {
+  margin: 0 0 1em;
+}
+
+.about-text p:last-child {
+  margin: 0;
 }
 
 .about-photo {
   flex: 1;
   text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .about-photo img {
@@ -49,6 +85,35 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
+.about-text:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skills h3 {
+  font-family: var(--primary-font);
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  background: var(--light-gray);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: var(--white);
+  font-family: var(--secondary-font);
+}
+
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
@@ -59,4 +124,24 @@
   .about-photo {
     margin-bottom: 20px;
   }
+
+  .about-text {
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-title,
+.about-content,
+.about-text,
+.about-photo img {
+  animation: fadeIn 1s ease-in-out;
 }

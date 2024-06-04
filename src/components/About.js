@@ -25,6 +25,16 @@ const About = () => {
               My main goals include becoming a senior software engineer,
               achieving economic freedom, and maintaining good health.
             </p>
+            <div className="skills">
+              <h3>Skills</h3>
+              <ul>
+                <li>Python</li>
+                <li>Rust</li>
+                <li>JavaScript</li>
+                <li>Forex Trading</li>
+                <li>Game Development</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
