@@ -52,6 +52,9 @@ const Header = () => {
         </div>
         <nav className={navActive ? "nav-active" : ""}>
           <ul>
+            <li className={activeSection === "about" ? "active" : ""}>
+              <a href="#about">About</a>
+            </li>
             <li className={activeSection === "skills" ? "active" : ""}>
               <a href="#skills">Skills</a>
             </li>
