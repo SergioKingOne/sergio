@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="about-section section">
       <div className="container">
         <h2 className="section-title">About Me</h2>
-        <article className="about-content">
+        <div className="about-content">
           <figure className="about-photo">
             <img src="./assets/images/sergiov2.jpeg" alt="Portrait of Sergio" />
           </figure>
@@ -36,7 +36,7 @@ const About = () => {
               </ul>
             </div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
   );
