@@ -52,21 +52,21 @@ const About = () => {
           </figure>
           <div className="about-text">
             <p>
-              Hello! I'm Sergio, a passionate and adaptable individual with a
-              strong background in technical support and a growing enthusiasm
-              for software development.
+              I'm a backend developer and MLOps leader for Vertex Studio in El
+              Salvador. I'm passionate about software development and tech in
+              general.
             </p>
             <div className="skills">
               <h3>Skills</h3>
               <ul>
                 <li>
-                  <span>Python</span>
+                  <span>Rust</span>
                   <div className="bar">
                     <div className="level" style={{ width: "90%" }}></div>
                   </div>
                 </li>
                 <li>
-                  <span>Rust</span>
+                  <span>Python</span>
                   <div className="bar">
                     <div className="level" style={{ width: "85%" }}></div>
                   </div>
@@ -78,13 +78,13 @@ const About = () => {
                   </div>
                 </li>
                 <li>
-                  <span>Forex Trading</span>
+                  <span>React</span>
                   <div className="bar">
                     <div className="level" style={{ width: "75%" }}></div>
                   </div>
                 </li>
                 <li>
-                  <span>Game Development</span>
+                  <span>Node.js</span>
                   <div className="bar">
                     <div className="level" style={{ width: "70%" }}></div>
                   </div>
