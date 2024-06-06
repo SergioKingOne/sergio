@@ -1,7 +1,13 @@
 import React from "react";
 import "../styles/experience.css";
 
-const ExperienceItem = ({ title, company, duration, responsibilities }) => (
+const ExperienceItem = ({
+  title,
+  company,
+  duration,
+  responsibilities,
+  projects,
+}) => (
   <div className="timeline-item">
     <div className="timeline-content">
       <h3>
@@ -18,6 +24,24 @@ const ExperienceItem = ({ title, company, duration, responsibilities }) => (
           ></li>
         ))}
       </ul>
+      {projects && projects.length > 0 && (
+        <div className="projects">
+          <strong>Related Projects:</strong>
+          <ul>
+            {projects.map((project, index) => (
+              <li key={index}>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </div>
 );
@@ -35,6 +59,13 @@ const Experience = () => {
         "Conducted <strong>unit and integration testing</strong> in Rust, ensuring software stability.",
         "Helped in reducing <strong>AI generation time</strong> from 50s to 3.5s by optimizing the Microsoft ONNX runtime library for NVIDIA hardware.",
       ],
+      projects: [
+        {
+          name: "AI Image Generation",
+          link: "https://example.com/ai-image-generation",
+        },
+        { name: "MLOps Pipeline", link: "https://example.com/mlops-pipeline" },
+      ],
     },
     {
       title: "Software Engineer",
@@ -46,18 +77,18 @@ const Experience = () => {
         "Utilized <strong>Docker</strong> and <strong>Ansible</strong> for <strong>containerization and configuration management</strong>.",
         "Managed backend services in Rust, focusing on <strong>data pipeline construction</strong> for generative AI.",
       ],
+      projects: [
+        {
+          name: "3D Asset Generation",
+          link: "https://example.com/3d-asset-generation",
+        },
+        {
+          name: "API Development",
+          link: "https://example.com/api-development",
+        },
+      ],
     },
-    // TODO: Adding more sections causes dynammic section identification not to work here
-    // {
-    //   title: "Technical Support Specialist (Internship)",
-    //   company: "Company Name",
-    //   duration: "Aug 2022 - Jul 2023",
-    //   responsibilities: [
-    //     "Provided technical support to customers, solving software and hardware issues.",
-    //     "Ensured smooth communication between technical support, development, and accounting departments.",
-    //     "Achieved the highest number of difficult issues solved in a month."
-    //   ],
-    // },
+    // Add more experiences as needed
   ];
 
   return (
