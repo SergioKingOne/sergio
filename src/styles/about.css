@@ -65,6 +65,7 @@
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
+  border: 1px solid var(--gold);
   padding: 40px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -98,6 +99,7 @@
   align-items: center;
   overflow: hidden;
   border-radius: 50%;
+  border: 1px solid var(--gold);
   transform: translateZ(0);
 }
 

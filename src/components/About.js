@@ -57,7 +57,6 @@ const About = () => {
               general.
             </p>
             <div className="skills">
-              <h3>Skills</h3>
               <ul>
                 <li>
                   <span>Rust</span>

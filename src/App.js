@@ -19,7 +19,7 @@ const App = () => {
         <div id="main-bg"></div>
         <Hero />
         <About />
-        <Skills />
+        {/* <Skills /> */}
         <Experience />
         <Projects />
         <Testimonials />
