@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import "../styles/contact.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // replace with your EmailJS template ID
+        form.current,
+        "YOUR_USER_ID" // replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send the message, please try again.");
+        }
+      );
+  };
+
   return (
     <section id="contact-section" className="contact-section">
       <div className="contact-card">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form id="contact-form" ref={form} onSubmit={sendEmail}>
           <label htmlFor="name">Your Name</label>
           <input
             type="text"
