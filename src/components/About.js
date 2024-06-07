@@ -5,6 +5,12 @@ import {
   FaCheckDouble,
   FaTachometerAlt,
   FaUsers,
+  FaRust,
+  FaPython,
+  FaAws,
+  FaDatabase,
+  FaBrain,
+  FaTools,
 } from "react-icons/fa";
 
 const About = () => {
@@ -18,31 +24,34 @@ const About = () => {
             <h3>Scalable</h3>
             <p>
               My highest priority is ensuring our systems can handle increasing
-              loads and scale effortlessly as our product grows.
+              loads and <strong>scale effortlessly</strong> as our product
+              grows.
             </p>
           </div>
           <div className="feature">
             <FaCheckDouble className="feature-icon" />
             <h3>Reliable</h3>
             <p>
-              I focus on building robust and fault-tolerant systems, ensuring
-              high availability and consistent performance.
+              I focus on building <strong>robust</strong> and fault-tolerant
+              systems, ensuring
+              <strong> high availability</strong> and consistent performance.
             </p>
           </div>
           <div className="feature">
             <FaTachometerAlt className="feature-icon" />
             <h3>Efficient</h3>
             <p>
-              I prioritize optimizing algorithms and processes to enhance system
-              performance and reduce resource consumption.
+              I prioritize <strong>optimizing algorithms</strong> and processes
+              to enhance system performance and reduce resource consumption.
             </p>
           </div>
           <div className="feature">
             <FaUsers className="feature-icon" />
             <h3>Collaborative</h3>
             <p>
-              I foster teamwork and clear communication across departments,
-              ensuring seamless integration and efficient operations.
+              I foster <strong>teamwork</strong> and clear communication across
+              departments, ensuring <strong>seamless integration</strong> and
+              efficient operations.
             </p>
           </div>
         </div>
@@ -52,43 +61,50 @@ const About = () => {
           </figure>
           <div className="about-text">
             <p>
-              I'm a backend developer and MLOps leader for Vertex Studio in El
-              Salvador. I'm passionate about software development and tech in
+              I'm a backend developer and MLOps leader for{" "}
+              <a href="https://vertexstudio.co/index.html">Vertex Studio</a> in
+              El Salvador. I'm passionate about software development and tech in
               general.
             </p>
             <div className="skills">
               <ul>
                 <li>
+                  <FaRust className="skill-icon" />
                   <span>Rust</span>
                   <div className="bar">
                     <div className="level" style={{ width: "90%" }}></div>
                   </div>
                 </li>
                 <li>
+                  <FaPython className="skill-icon" />
                   <span>Python</span>
                   <div className="bar">
                     <div className="level" style={{ width: "85%" }}></div>
                   </div>
                 </li>
                 <li>
+                  <FaAws className="skill-icon" />
                   <span>AWS</span>
                   <div className="bar">
                     <div className="level" style={{ width: "80%" }}></div>
                   </div>
                 </li>
                 <li>
+                  <FaDatabase className="skill-icon" />
                   <span>Databases</span>
                   <div className="bar">
                     <div className="level" style={{ width: "80%" }}></div>
                   </div>
                 </li>
                 <li>
+                  <FaBrain className="skill-icon" />
                   <span>AI / ML</span>
                   <div className="bar">
                     <div className="level" style={{ width: "75%" }}></div>
                   </div>
                 </li>
                 <li>
+                  <FaTools className="skill-icon" />
                   <span>DevOps</span>
                   <div className="bar">
                     <div className="level" style={{ width: "70%" }}></div>

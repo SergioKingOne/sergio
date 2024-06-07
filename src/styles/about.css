@@ -169,6 +169,12 @@
   top: 0;
 }
 
+.skills ul li .skill-icon {
+  font-size: 1.5em;
+  color: var(--gold);
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
