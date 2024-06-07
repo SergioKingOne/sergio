@@ -93,6 +93,10 @@
   margin: 0;
 }
 
+.about-text p strong {
+  color: var(--gold);
+}
+
 .about-photo {
   display: flex;
   justify-content: center;
