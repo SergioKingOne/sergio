@@ -65,7 +65,7 @@ const Header = () => {
               <a href="#projects">Projects</a>
             </li>
             <li className={activeSection === "testimonials" ? "active" : ""}>
-              <a href="#testimonials">Testimonials</a>
+              <a href="#testimonials">Recommendations</a>
             </li>
             <li className={activeSection === "contact-section" ? "active" : ""}>
               <a href="#contact-section">Contact</a>
