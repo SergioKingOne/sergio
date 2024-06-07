@@ -99,23 +99,23 @@
   align-items: center;
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid var(--gold);
   transform: translateZ(0);
 }
 
 .about-photo img {
   max-width: 100%;
   border-radius: 50%;
+  border: 1px solid var(--gold);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform var(--transition-duration) ease,
     box-shadow var(--transition-duration) ease;
   transform: translateZ(0);
 }
 
-.about-photo img:hover {
+/* .about-photo img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .about-text:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);

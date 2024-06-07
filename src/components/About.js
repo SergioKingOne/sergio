@@ -71,19 +71,25 @@ const About = () => {
                   </div>
                 </li>
                 <li>
-                  <span>JavaScript</span>
+                  <span>AWS</span>
                   <div className="bar">
                     <div className="level" style={{ width: "80%" }}></div>
                   </div>
                 </li>
                 <li>
-                  <span>React</span>
+                  <span>Databases</span>
+                  <div className="bar">
+                    <div className="level" style={{ width: "80%" }}></div>
+                  </div>
+                </li>
+                <li>
+                  <span>AI / ML</span>
                   <div className="bar">
                     <div className="level" style={{ width: "75%" }}></div>
                   </div>
                 </li>
                 <li>
-                  <span>Node.js</span>
+                  <span>DevOps</span>
                   <div className="bar">
                     <div className="level" style={{ width: "70%" }}></div>
                   </div>
