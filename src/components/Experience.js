@@ -26,7 +26,9 @@ const ExperienceItem = ({
       </ul>
       {projects && projects.length > 0 && (
         <div className="projects">
-          <strong>Related Projects:</strong>
+          <p>
+            <strong>Related Projects:</strong>
+          </p>
           <ul>
             {projects.map((project, index) => (
               <li key={index}>
