@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/about.css";
 import {
   FaServer,
@@ -14,6 +14,14 @@ import {
 } from "react-icons/fa";
 
 const About = () => {
+  useEffect(() => {
+    const skillBars = document.querySelectorAll(".level");
+    skillBars.forEach((bar) => {
+      const width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, []);
+
   return (
     <section id="about" className="about-section section">
       <div className="container">
@@ -79,42 +87,42 @@ const About = () => {
                   <FaRust className="skill-icon" />
                   <span>Rust</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "90%" }}></div>
+                    <div className="level" data-width="90%"></div>
                   </div>
                 </li>
                 <li>
                   <FaPython className="skill-icon" />
                   <span>Python</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "85%" }}></div>
+                    <div className="level" data-width="85%"></div>
                   </div>
                 </li>
                 <li>
                   <FaAws className="skill-icon" />
                   <span>AWS</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "80%" }}></div>
+                    <div className="level" data-width="80%"></div>
                   </div>
                 </li>
                 <li>
                   <FaDatabase className="skill-icon" />
                   <span>Databases</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "80%" }}></div>
+                    <div className="level" data-width="80%"></div>
                   </div>
                 </li>
                 <li>
                   <FaBrain className="skill-icon" />
                   <span>AI / ML</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "75%" }}></div>
+                    <div className="level" data-width="75%"></div>
                   </div>
                 </li>
                 <li>
                   <FaTools className="skill-icon" />
                   <span>DevOps</span>
                   <div className="bar">
-                    <div className="level" style={{ width: "70%" }}></div>
+                    <div className="level" data-width="70%"></div>
                   </div>
                 </li>
               </ul>

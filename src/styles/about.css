@@ -93,10 +93,6 @@
   margin: 0;
 }
 
-.about-text p strong {
-  color: var(--gold);
-}
-
 .about-photo {
   display: flex;
   justify-content: center;
@@ -115,11 +111,6 @@
     box-shadow var(--transition-duration) ease;
   transform: translateZ(0);
 }
-
-/* .about-photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-} */
 
 .about-text:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -171,6 +162,8 @@
   position: absolute;
   left: 0;
   top: 0;
+  width: 0;
+  transition: width 2s ease-in-out;
 }
 
 .skills ul li .skill-icon {
