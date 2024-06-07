@@ -59,13 +59,7 @@ const Experience = () => {
         "Conducted <strong>unit and integration testing</strong> in Rust, ensuring software stability.",
         "Helped in reducing <strong>AI generation time</strong> from 50s to 3.5s by optimizing the Microsoft ONNX runtime library for NVIDIA hardware.",
       ],
-      projects: [
-        {
-          name: "AI Image Generation",
-          link: "https://example.com/ai-image-generation",
-        },
-        { name: "MLOps Pipeline", link: "https://example.com/mlops-pipeline" },
-      ],
+      projects: [],
     },
     {
       title: "Software Engineer",
@@ -79,12 +73,8 @@ const Experience = () => {
       ],
       projects: [
         {
-          name: "3D Asset Generation",
-          link: "https://example.com/3d-asset-generation",
-        },
-        {
-          name: "API Development",
-          link: "https://example.com/api-development",
+          name: "Sortium AI - Product Demo",
+          link: "https://www.youtube.com/watch?v=wN22ooW-2e4",
         },
       ],
     },
