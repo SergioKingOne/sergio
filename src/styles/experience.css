@@ -93,6 +93,34 @@
   color: var(--gold);
 }
 
+.projects {
+  margin-top: 10px;
+}
+
+.projects strong {
+  color: var(--gold);
+}
+
+.projects ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.projects li {
+  margin-bottom: 5px;
+}
+
+.projects a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-size: 1em;
+}
+
+.projects a:hover {
+  color: var(--gold);
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
