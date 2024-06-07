@@ -61,10 +61,17 @@ const About = () => {
           </figure>
           <div className="about-text">
             <p>
-              I'm a backend developer and MLOps leader for{" "}
-              <a href="https://vertexstudio.co/index.html">Vertex Studio</a> in
-              El Salvador. I'm passionate about software development and tech in
-              general.
+              I'm a <strong>backend</strong> developer and{" "}
+              <strong>MLOps leader</strong> for{" "}
+              <a
+                href="https://vertexstudio.co/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Vertex Studio
+              </a>{" "}
+              in El Salvador. I'm passionate about software development and tech
+              in general.
             </p>
             <div className="skills">
               <ul>
