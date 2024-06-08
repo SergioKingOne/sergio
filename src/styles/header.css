@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
 header {
   background-color: var(--dark-gray);
@@ -13,12 +13,13 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 30px 20px;
 }
 
 header .logo {
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
 header .logo a {
@@ -103,6 +104,10 @@ header nav ul li a:hover {
     padding: 10px 15px;
   }
 
+  header .logo {
+    position: relative;
+  }
+
   header .logo a {
     font-size: 3.5em;
   }
@@ -134,6 +139,10 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+  }
+
+  header .logo {
+    position: relative;
   }
 
   header .logo a {
@@ -225,7 +234,8 @@ header nav ul li a:hover {
     align-items: center;
   }
 
-  .skill, .project {
+  .skill,
+  .project {
     width: 80%;
   }
 }
@@ -234,6 +244,10 @@ header nav ul li a:hover {
 @media (max-width: 992px) {
   header .container {
     padding: 10px 10px;
+  }
+
+  header .logo {
+    position: relative;
   }
 
   header .logo a {
@@ -267,7 +281,8 @@ header nav ul li a:hover {
     justify-content: space-between;
   }
 
-  .skill, .project {
+  .skill,
+  .project {
     width: 48%;
   }
 }
@@ -276,6 +291,10 @@ header nav ul li a:hover {
 @media (max-width: 576px) {
   header .container {
     padding: 10px;
+  }
+
+  header .logo {
+    position: relative;
   }
 
   header .logo a {
@@ -314,7 +333,8 @@ header nav ul li a:hover {
     align-items: center;
   }
 
-  .skill, .project {
+  .skill,
+  .project {
     width: 90%;
   }
 }
@@ -323,6 +343,10 @@ header nav ul li a:hover {
 @media (max-width: 480px) {
   header .logo a {
     font-size: 1.8em;
+  }
+
+  header .logo {
+    position: relative;
   }
 
   header nav ul li a {
@@ -356,7 +380,8 @@ header nav ul li a:hover {
     align-items: center;
   }
 
-  .skill, .project {
+  .skill,
+  .project {
     width: 95%;
   }
 }
@@ -365,6 +390,10 @@ header nav ul li a:hover {
 @media (max-width: 360px) {
   header .logo a {
     font-size: 1.5em;
+  }
+
+  header .logo {
+    position: relative;
   }
 
   header nav ul li a {
@@ -398,7 +427,8 @@ header nav ul li a:hover {
     align-items: center;
   }
 
-  .skill, .project {
+  .skill,
+  .project {
     width: 100%;
   }
 }

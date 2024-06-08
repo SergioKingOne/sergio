@@ -1,19 +1,19 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  const themeToggle = document.getElementById("theme-toggle");
-  const toggleLabelIcon = document.querySelector(".toggle-label .fas");
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   const themeToggle = document.getElementById("theme-toggle");
+//   const toggleLabelIcon = document.querySelector(".toggle-label .fas");
 
-  themeToggle.addEventListener("change", () => {
-    if (themeToggle.checked) {
-      document.body.classList.add("light-theme");
-      toggleLabelIcon.classList.remove("fa-sun");
-      toggleLabelIcon.classList.add("fa-moon");
-    } else {
-      document.body.classList.remove("light-theme");
-      toggleLabelIcon.classList.remove("fa-moon");
-      toggleLabelIcon.classList.add("fa-sun");
-    }
-  });
-});
+//   themeToggle.addEventListener("change", () => {
+//     if (themeToggle.checked) {
+//       document.body.classList.add("light-theme");
+//       toggleLabelIcon.classList.remove("fa-sun");
+//       toggleLabelIcon.classList.add("fa-moon");
+//     } else {
+//       document.body.classList.remove("light-theme");
+//       toggleLabelIcon.classList.remove("fa-moon");
+//       toggleLabelIcon.classList.add("fa-sun");
+//     }
+//   });
+// });
 
 // Show or hide the scroll-to-top button
 window.addEventListener("scroll", () => {

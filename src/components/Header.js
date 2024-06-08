@@ -72,12 +72,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className="theme-toggle">
+        {/* <div className="theme-toggle">
           <input type="checkbox" id="theme-toggle" />
           <label htmlFor="theme-toggle" className="toggle-label">
             <i className="fas fa-sun"></i>
           </label>
-        </div>
+        </div> */}
       </div>
     </header>
   );
