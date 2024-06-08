@@ -15,10 +15,25 @@ import {
 
 const About = () => {
   useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
     const skillBars = document.querySelectorAll(".level");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.getAttribute("data-width");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
     skillBars.forEach((bar) => {
-      const width = bar.getAttribute("data-width");
-      bar.style.width = width;
+      observer.observe(bar);
     });
   }, []);
 
