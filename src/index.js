@@ -11,7 +11,8 @@ ReactDOM.render(
 );
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".section");
+  const sectionsLeft = document.querySelectorAll(".section-left");
+  const sectionsRight = document.querySelectorAll(".section-right");
 
   const observerOptions = {
     root: null,
@@ -24,12 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
         entry.target.classList.remove("hidden");
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Remove the observer once the element is visible
       }
     });
   }, observerOptions);
 
-  sections.forEach((section) => {
+  sectionsLeft.forEach((section) => {
+    section.classList.add("hidden");
+    observer.observe(section);
+  });
+
+  sectionsRight.forEach((section) => {
     section.classList.add("hidden");
     observer.observe(section);
   });

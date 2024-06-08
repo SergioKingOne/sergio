@@ -8,7 +8,7 @@ const ExperienceItem = ({
   responsibilities,
   projects,
 }) => (
-  <div className="timeline-item section">
+  <div className="timeline-item">
     <div className="timeline-content">
       <h3>
         <strong>{title}</strong> at {company}
@@ -84,7 +84,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section section-right">
       <h2 className="section-title">Experience</h2>
       <div className="timeline">
         {experiences.map((experience, index) => (

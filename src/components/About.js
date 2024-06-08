@@ -23,7 +23,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="about-section section">
+    <section id="about" className="about-section section section-left">
       <div className="container">
         <h2 className="section-title">About</h2>
         <div className="features">
