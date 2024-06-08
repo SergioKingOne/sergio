@@ -64,12 +64,79 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-card form button:hover {
+.contact-card form button:disabled {
+  background-color: var(--dark-gray);
+  cursor: not-allowed;
+}
+
+.contact-card form button:hover:not(:disabled) {
   background-color: var(--white);
   color: var(--gold);
   transform: translateY(-5px) scale(1.05);
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left-color: var(--white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--dark-gray);
+  color: var(--white);
+  animation: fadeInOut 3s forwards;
+  z-index: 9999;
+  border: 1px solid var(--gold);
+}
+
+.notification.success {
+  background-color: var(--success-green);
+}
+
+.notification.error {
+  background-color: var(--error-red);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 .contact-info {
@@ -90,24 +157,6 @@
   text-decoration: underline;
 }
 
-@keyframes movePattern {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.contact-card,
-.contact-info {
-  position: relative;
-  z-index: 1;
-}
-
 @media (max-width: 768px) {
   .contact-card form input,
   .contact-card form textarea {
@@ -120,4 +169,13 @@
     margin: 10px;
     width: auto;
   }
+}
+
+/* Define additional color variables */
+:root {
+  --success-green: #28a745;
+  --error-red: #dc3545;
+  --dark-gray: #333;
+  --gold: #d4af37;
+  --white: #fff;
 }
