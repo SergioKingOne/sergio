@@ -12,7 +12,8 @@
   background-color: var(--dark-gray);
   border: 1px solid var(--gold);
   border-radius: 10px;
-  padding: 40px;
+  /* padding bottom 80px and the rest 40px */
+  padding: 40px 40px 80px 40px;
   width: 100%;
   max-width: 500px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -41,7 +42,7 @@
   margin-bottom: 20px;
   border: 1px solid var(--gold);
   border-radius: 5px;
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   color: var(--white);
   transition: background-color 0.3s, color 0.3s;
   font-size: 1.2em;
@@ -64,12 +65,85 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-card form button:hover {
+.contact-card form button:disabled {
+  background-color: var(--light-gray);
+  cursor: not-allowed;
+}
+
+.contact-card form button:hover:not(:disabled) {
   background-color: var(--white);
   color: var(--gold);
   transform: translateY(-5px) scale(1.05);
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left-color: var(--white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: var(--light-gray);
+  color: var(--white);
+  opacity: 0.9;
+  animation: fadeInOut 3s forwards;
+  z-index: 9999;
+  border: 1px solid var(--gold);
+}
+
+.notification.success {
+  background-color: var(--gold);
+  color: var(--dark-gray);
+}
+
+.notification.error {
+  background-color: #d9534f; /* Bootstrap red */
+  color: var(--white);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  10% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%);
+  }
+  90% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
 }
 
 .contact-info {
@@ -88,24 +162,6 @@
 
 .contact-info a:hover {
   text-decoration: underline;
-}
-
-@keyframes movePattern {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.contact-card,
-.contact-info {
-  position: relative;
-  z-index: 1;
 }
 
 @media (max-width: 768px) {
