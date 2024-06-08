@@ -78,17 +78,6 @@ const Contact = () => {
             {isLoading ? <div className="spinner"></div> : "Send"}
           </button>
         </form>
-        <div className="contact-info">
-          <p>
-            Email:{" "}
-            <a href="mailto:sergiorobayorr@gmail.com">
-              sergiorobayorr@gmail.com
-            </a>
-          </p>
-          <p>
-            Phone: <a href="tel:+573114919504">+57 3114919504</a>
-          </p>
-        </div>
       </div>
       {showNotification && (
         <div

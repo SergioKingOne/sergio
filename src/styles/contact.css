@@ -12,7 +12,8 @@
   background-color: var(--dark-gray);
   border: 1px solid var(--gold);
   border-radius: 10px;
-  padding: 40px;
+  /* padding bottom 80px and the rest 40px */
+  padding: 40px 40px 80px 40px;
   width: 100%;
   max-width: 500px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
