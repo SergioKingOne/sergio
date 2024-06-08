@@ -80,7 +80,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="testimonials-section">
+    <section
+      id="testimonials"
+      className="testimonials-section section section-right"
+    >
       <h2 className="section-title">Recommendations</h2>
       <Slider {...settings}>
         {testimonialsData.map((testimonial, index) => (

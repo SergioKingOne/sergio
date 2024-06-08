@@ -379,6 +379,57 @@ body.light-theme .hero-button {
   animation: gradient-animation 15s ease infinite;
 }
 
+/* Define different animation keyframes */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section.hidden {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-left.hidden {
+  transform: translateX(-50px);
+}
+
+.section-right.hidden {
+  transform: translateX(50px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.section-left.visible {
+  animation-name: slideInFromLeft;
+}
+
+.section-right.visible {
+  animation-name: slideInFromRight;
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
