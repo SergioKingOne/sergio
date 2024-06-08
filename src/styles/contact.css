@@ -41,7 +41,7 @@
   margin-bottom: 20px;
   border: 1px solid var(--gold);
   border-radius: 5px;
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   color: var(--white);
   transition: background-color 0.3s, color 0.3s;
   font-size: 1.2em;
@@ -70,7 +70,7 @@
 }
 
 .contact-card form button:disabled {
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   cursor: not-allowed;
 }
 
@@ -102,10 +102,12 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  background-color: var(--dark-gray);
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: var(--light-gray);
   color: var(--white);
   animation: fadeInOut 3s forwards;
   z-index: 9999;
@@ -113,11 +115,13 @@
 }
 
 .notification.success {
-  background-color: var(--success-green);
+  background-color: var(--gold);
+  color: var(--dark-gray);
 }
 
 .notification.error {
-  background-color: var(--error-red);
+  background-color: #d9534f; /* Bootstrap red */
+  color: var(--white);
 }
 
 @keyframes fadeInOut {
@@ -169,13 +173,4 @@
     margin: 10px;
     width: auto;
   }
-}
-
-/* Define additional color variables */
-:root {
-  --success-green: #28a745;
-  --error-red: #dc3545;
-  --dark-gray: #333;
-  --gold: #d4af37;
-  --white: #fff;
 }
