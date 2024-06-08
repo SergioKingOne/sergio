@@ -46,7 +46,7 @@ const Contact = () => {
   }, [showNotification]);
 
   return (
-    <section id="contact-section" className="contact-section">
+    <section id="contact-section" className="contact-section section">
       <div className="contact-card">
         <h2>Contact Me</h2>
         <form id="contact-form" onSubmit={handleSubmit}>

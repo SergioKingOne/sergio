@@ -8,7 +8,7 @@ const ExperienceItem = ({
   responsibilities,
   projects,
 }) => (
-  <div className="timeline-item">
+  <div className="timeline-item section">
     <div className="timeline-content">
       <h3>
         <strong>{title}</strong> at {company}
