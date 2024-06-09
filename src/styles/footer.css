@@ -11,31 +11,9 @@ footer {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1400px) {
   footer {
     padding: 15px 0;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  footer {
-    padding: 18px 0;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  footer {
-    padding: 20px 0;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  footer {
-    padding: 22px 0;
   }
 
   footer p {
@@ -49,19 +27,36 @@ footer {
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, up to 1200px) */
+@media only screen and (max-width: 1199px) {
   footer {
-    padding: 20px 0;
-  }
-
-  footer p {
-    margin: 0.5em 0;
+    padding: 22px 0;
   }
 
   .fa-github,
   .fa-linkedin,
   .fa-twitter {
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+}
+
+/* Large devices (laptops/desktops, up to 992px) */
+@media only screen and (max-width: 991px) {
+  footer {
+    padding: 20px 0;
+  }
+}
+
+/* Medium devices (landscape tablets, up to 768px) */
+@media only screen and (max-width: 767px) {
+  footer {
+    padding: 18px 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, up to 600px) */
+@media only screen and (max-width: 599px) {
+  footer {
+    padding: 15px 0;
   }
 }
