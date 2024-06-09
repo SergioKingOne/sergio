@@ -109,4 +109,5 @@ This project is licensed under the MIT License.
 Feel free to reach out if you have any questions or suggestions:
 
 Email: sergiorobayoro@gmail.com
+
 LinkedIn: [Sergio's LinkedIn](https://www.linkedin.com/in/sergio-robayo-500584216/)
