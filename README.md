@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Sergio's Portfolio Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio project! This repository contains the source code for my personal portfolio website. It showcases my skills, projects, experience, and contact information.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Sergio's Portfolio Project](#sergios-portfolio-project)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Project Structure](#project-structure)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: Adapts to different screen sizes.
+- **Single Page Application**: Smooth navigation without page reloads.
+- **Dynamic Content**: Showcases projects, skills, and experience dynamically.
+- **Contact Form**: Allows visitors to get in touch with me.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- **React**: JavaScript library for building user interfaces.
+- **CSS Modules**: Scoped and modular CSS styling.
+- **JavaScript (ES6+)**: Modern JavaScript features.
+- **HTML5**: Markup language for structuring the content.
+- **Node.js**: JavaScript runtime for server-side development.
+- **NPM**: Package manager for JavaScript.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+- package.json
+- package-lock.json
+- public
+    - assets
+        - bgs
+        - images
+            - keep-it-simple.jpeg
+            - sergiov2.jpeg
+        - kiss.jpeg
+        - fast-pizza.jpeg
+        - wild_oasis.jpeg
+    - index.html
+    - manifest.json
+    - robots.txt
+    - scripts.js
+- README.md
+- src
+    - App.css
+    - App.js
+    - components
+        - About.js
+        - Contact.js
+        - Experience.js
+        - Footer.js
+        - Header.js
+        - Hero.js
+        - Projects.js
+        - Skills.js
+        - Testimonials.js
+    - index.css
+    - index.js
+    - reportWebVitals.js
+    - setupTests.js
+    - styles
+        - about.css
+        - contact.css
+        - experience.css
+        - footer.css
+        - global.css
+        - header.css
+        - hero.css
+        - projects.css
+        - skills.css
+        - testimonials.css
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you would like to contribute to this project, please follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Fork the repository.
+   
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature
+    ```
+3. Make your changes and commit them:
+    ```bash
+    git commit -m 'Add your feature'
+     ```
 
-### `npm run eject`
+4. Push to the main branch:
+    ```bash
+    git push origin feature/your-feature
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Create a pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
 
-## Learn More
+Feel free to reach out if you have any questions or suggestions:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email: sergiorobayoro@gmail.com
+LinkedIn: [Sergio's LinkedIn](https://www.linkedin.com/in/sergio-robayo-500584216/)
