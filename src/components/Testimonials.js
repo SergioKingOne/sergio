@@ -9,7 +9,7 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 const testimonialsData = [
   {
     img: "https://media.licdn.com/dms/image/D4E35AQGvxKJ86UxJDA/profile-framedphoto-shrink_100_100/0/1709308762102?e=1717898400&v=beta&t=CDqJJ8_tBye0Wf3yk3S3Z5qgHjsRDwKVHA-jQ2D-LyM",
-    text: "Sergio is an excellent developer. His work is top-notch!",
+    text: "Sergio is much more than a talented software developer; he's a dedicated professional who continues to evolve and grow in his field. His combination of solid technical skills and exceptional interpersonal abilities make him an invaluable asset to any development team.",
     name: "Diego Mendez",
     title: "Software Engineer Freelancer",
     linkedin:
@@ -18,7 +18,7 @@ const testimonialsData = [
   },
   {
     img: "https://media.licdn.com/dms/image/C4E03AQEdh0Lql8kWhQ/profile-displayphoto-shrink_100_100/0/1638569585389?e=1723075200&v=beta&t=hN0oBgiwhryxwVKtrJsPdutkeF2e686_wLtI0EHH71g",
-    text: "Highly recommended for any development needs.",
+    text: "Sergio, who stands out for being a great teammate, is a highly capable person, with an always positive attitude towards any problem that may arise in a task, extremely responsible and very talented.",
     name: "Leandro Signorini",
     title: "Software Engineer at Vertex Studio",
     linkedin:
@@ -80,8 +80,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="testimonials-section">
-      <h2 className="section-title">Testimonials</h2>
+    <section
+      id="testimonials"
+      className="testimonials-section section section-right"
+    >
+      <h2 className="section-title">Recommendations</h2>
       <Slider {...settings}>
         {testimonialsData.map((testimonial, index) => (
           <div className="testimonial-card" key={index}>

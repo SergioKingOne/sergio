@@ -3,6 +3,7 @@ import "../styles/header.css";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [navActive, setNavActive] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -31,17 +32,32 @@ const Header = () => {
     };
   }, []);
 
+  const toggleNav = () => {
+    setNavActive(!navActive);
+  };
+
   return (
     <header>
       <div className="container">
         <div className="logo">
           <a href="#">Sergio</a>
         </div>
-        <nav>
+        <div
+          className={`hamburger ${navActive ? "hamburger-active" : ""}`}
+          onClick={toggleNav}
+        >
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
+        <nav className={navActive ? "nav-active" : ""}>
           <ul>
-            <li className={activeSection === "skills" ? "active" : ""}>
-              <a href="#skills">Skills</a>
+            <li className={activeSection === "about" ? "active" : ""}>
+              <a href="#about">About</a>
             </li>
+            {/* <li className={activeSection === "skills" ? "active" : ""}>
+              <a href="#skills">Skills</a>
+            </li> */}
             <li className={activeSection === "experience" ? "active" : ""}>
               <a href="#experience">Experience</a>
             </li>
@@ -49,19 +65,19 @@ const Header = () => {
               <a href="#projects">Projects</a>
             </li>
             <li className={activeSection === "testimonials" ? "active" : ""}>
-              <a href="#testimonials">Testimonials</a>
+              <a href="#testimonials">Recommendations</a>
             </li>
             <li className={activeSection === "contact-section" ? "active" : ""}>
               <a href="#contact-section">Contact</a>
             </li>
           </ul>
         </nav>
-        <div className="theme-toggle">
+        {/* <div className="theme-toggle">
           <input type="checkbox" id="theme-toggle" />
           <label htmlFor="theme-toggle" className="toggle-label">
             <i className="fas fa-sun"></i>
           </label>
-        </div>
+        </div> */}
       </div>
     </header>
   );

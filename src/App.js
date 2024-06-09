@@ -1,4 +1,5 @@
 import React from "react";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -17,7 +18,8 @@ const App = () => {
       <main>
         <div id="main-bg"></div>
         <Hero />
-        <Skills />
+        <About />
+        {/* <Skills /> */}
         <Experience />
         <Projects />
         <Testimonials />
