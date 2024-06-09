@@ -99,6 +99,36 @@ header nav ul li a:hover {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1400px) {
+  header .container {
+    padding: 25px 15px 25px;
+  }
+
+  header .logo a {
+    font-size: 3.5em;
+  }
+
+  header nav ul li a {
+    font-size: 1.1em;
+  }
+
+  .toggle-label {
+    padding: 5px 10px;
+  }
+
+  .section-title {
+    font-size: 2.5em;
+  }
+
+  .contact-card,
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
   header .container {
     padding: 10px 15px;
