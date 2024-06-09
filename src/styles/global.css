@@ -468,6 +468,12 @@ body.light-theme .hero-button {
   .section-title {
     font-size: 2.1em;
   }
+
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 1200px) {

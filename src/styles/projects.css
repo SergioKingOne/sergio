@@ -32,7 +32,8 @@
   background-color: var(--light-gray);
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s, max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s, max-height 0.5s ease-in-out,
+    padding 0.3s ease-in-out;
   width: 100%;
   max-width: 400px;
   text-align: center;
@@ -134,12 +135,96 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
+  .project-card {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .project-image-container {
+    max-height: 150px;
+    max-width: 90%;
+  }
+
+  .project-card.expanded {
+    max-height: 450px;
+  }
+
+  .project-content h3 {
+    font-size: 1.6em;
+  }
+
+  .project-content p {
+    font-size: 0.9em;
+    max-height: 50px;
+  }
+
+  .project-details {
+    padding: 10px;
+  }
+
+  .project-links {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .project-card {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .project-card.expanded {
+    max-height: 550px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .section-title {
+    font-size: 1.75em;
+  }
+
+  .project-card {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .project-card.expanded {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
   .project-card {
     width: 90%;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .project-card.expanded {
+    max-height: 450px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .project-card {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .project-card.expanded {
+    max-height: 400px;
   }
 }
