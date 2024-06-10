@@ -4,7 +4,7 @@ import "../styles/projects.css";
 const projectsData = [
   {
     title: "Wild Oasis",
-    image: "./sergio/assets/wild_oasis.jpeg",
+    image: "./assets/wild_oasis.jpeg",
     description:
       "A hotel administration web application built with React, Redux, and Supabase.",
     details:
@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     title: "Fast Pizza",
-    image: "./sergio/assets/fast-pizza.jpeg",
+    image: "./assets/fast-pizza.jpeg",
     description:
       "A pizza ordering web application built with HTML, CSS, and JavaScript.",
     details:
