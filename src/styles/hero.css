@@ -1,6 +1,7 @@
 .hero-section {
   height: 100vh;
-  background: url("../../public/assets/images/keep-it-simple.jpeg") no-repeat center center/cover;
+  background: url("../../public/assets/images/keep-it-simple.jpeg") no-repeat
+    center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,4 +59,90 @@
   background-color: var(--white);
   color: var(--gold);
   transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1400px) {
+  .hero-content h1 {
+    font-size: 3em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+
+  .hero-button {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-section {
+    height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.3em;
+  }
+
+  .hero-button {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 3em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+
+  .hero-button {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .hero-button {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 0.9em;
+  }
+
+  .hero-button {
+    font-size: 0.8em;
+  }
 }
