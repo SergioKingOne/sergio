@@ -460,6 +460,22 @@ body.light-theme .hero-button {
 }
 
 /* Responsive Design */
+@media (max-width: 1400px) {
+  .nav ul li {
+    margin: 0 15px;
+  }
+
+  .section-title {
+    font-size: 2.1em;
+  }
+
+  .skill-card,
+  .experience-card,
+  .project-card {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 1200px) {
   .skill,
   .project,

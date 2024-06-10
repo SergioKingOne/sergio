@@ -2,10 +2,61 @@ footer {
   background-color: var(--dark-gray);
   color: var(--white);
   text-align: center;
+  align-items: center;
   padding: 20px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 1400px) {
+  footer {
+    padding: 15px 0;
+  }
+
+  footer p {
+    margin: 0.5em 0;
+  }
+
+  .fa-github,
+  .fa-linkedin,
+  .fa-twitter {
+    font-size: 0.7em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, up to 1200px) */
+@media only screen and (max-width: 1199px) {
+  footer {
+    padding: 22px 0;
+  }
+
+  .fa-github,
+  .fa-linkedin,
+  .fa-twitter {
+    font-size: 0.7em;
+  }
+}
+
+/* Large devices (laptops/desktops, up to 992px) */
+@media only screen and (max-width: 991px) {
+  footer {
+    padding: 20px 0;
+  }
+}
+
+/* Medium devices (landscape tablets, up to 768px) */
+@media only screen and (max-width: 767px) {
+  footer {
+    padding: 18px 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, up to 600px) */
+@media only screen and (max-width: 599px) {
+  footer {
+    padding: 15px 0;
+  }
 }

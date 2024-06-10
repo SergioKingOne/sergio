@@ -80,7 +80,10 @@ const About = () => {
         </div>
         <div className="about-content">
           <figure className="about-photo">
-            <img src="./assets/images/sergiov2.jpeg" alt="Portrait of Sergio" />
+            <img
+              src="./sergio/assets/images/sergiov2.jpeg"
+              alt="Portrait of Sergio"
+            />
           </figure>
           <div className="about-text">
             <p>
